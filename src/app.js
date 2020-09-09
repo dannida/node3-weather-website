@@ -12,6 +12,7 @@ const { DefaultDeserializer } = require('v8')
 
 //express function is assigned to app
 const app = express()
+const port = process.env.PORT || 3000 //helps heroku to set up a port to run the application
 
 //Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -114,6 +115,6 @@ app.get('*', (req, res) => {
 })
 
 //the listen method starts the server
-app.listen(3000, () => {
-    console.log(chalk.yellowBright('SERVER: "Valley of the dead souls" up and running on port 3000'))
+app.listen(port, () => {
+    console.log(chalk.yellowBright('SERVER: "Valley of the dead souls" up and running on port ' + port))
 })
