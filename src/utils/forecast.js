@@ -18,7 +18,8 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to find Location", undefined);
         } else {
             callback(
-                undefined, weatherDescrip + ". It is currently " + tmp + " degrees out there. " + "There is " + prec + "% chance of rain." + "\r\n" + "Time of report: " + time + " Visibility is: " + visibility
+                undefined,
+                weatherDescrip + ". It is currently " + tmp + " degrees out there. " + "There is " + prec + "% chance of rain." + "\r\n" + "Time of report: " + time + " Visibility is: " + visibility
             );
         }
     });
